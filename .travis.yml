@@ -11,7 +11,7 @@ script:
 deploy:
   provider: pages # Informs Travis this is a deployment to GitHub Pages
   skip_cleanup: true # Prevents Travis from resetting the working directory made during the build
-  github_token: bdcec9a878bdf446b1b7ff1b5effef98593fdbda # GitHub access token to use when pushing to the gh-pages branch
+  github_token: 383e7fdc6fd81f921d113407bbd3fc3a01bb0af1 # GitHub access token to use when pushing to the gh-pages branch
   local_dir: out # Directory to push to the gh-pages branch
   on:
     branch: master # Only deploy when the build is on master branch
