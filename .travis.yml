@@ -13,6 +13,5 @@ deploy:
   skip_cleanup: true # Prevents Travis from resetting the working directory made during the build
   github_token: bdcec9a878bdf446b1b7ff1b5effef98593fdbda # GitHub access token to use when pushing to the gh-pages branch
   local_dir: out # Directory to push to the gh-pages branch
-  fqdn: bayuslari.com # This instructs Travis to create a CNAME file with wallisconsultancy.co.uk as the contents on every deployment to the gh-pages branch
   on:
     branch: master # Only deploy when the build is on master branch
