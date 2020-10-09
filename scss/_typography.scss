@@ -1,0 +1,76 @@
+body {
+    font-family: "Cera CY Regular", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+    letter-spacing: 0.5px;
+}
+
+@font-face {
+    font-family: 'Cera CY Regular';
+    src: url('./../fonts/Cera-CY-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'Cera CY Bold';
+    src: url('./../fonts/Cera-CY-Bold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'Cera Black';
+    src: url('./../fonts/Cera-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: light;
+    color: rgba($primary, .7);
+}
+
+h1, h2, h3, h4 {
+    font-family: "Cera Black", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+.display-1 {
+    font-size: 200px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 30px $secondary;
+}
+
+.display-2 {
+    font-size: 88px;
+}
+
+.display-3 {
+    font-size: 72px;
+}
+
+.display-4 {
+    font-size: 56px;
+}
+
+.text-right {
+    text-align: right;
+}

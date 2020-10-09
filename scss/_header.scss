@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 30px 60px;
+    z-index: 1;
+    .logo {
+        height: 100px;
+    }
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar li {
+    margin-right: 15px;
+    margin-left: 15px;
+}
