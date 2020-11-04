@@ -1,0 +1,24 @@
+// Detail Page
+.project-container {
+    display: grid;
+    place-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.project-img {
+    width: 100%;
+    margin-bottom: 30px;
+    @include shadow;
+}
+
+.project-desc {
+    line-height: 1.5;
+}
+
+.project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}

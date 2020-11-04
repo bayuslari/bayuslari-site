@@ -1,0 +1,30 @@
+.profile-pic {
+    border-radius: 50%;
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+    object-position: top center;
+    display: flex;
+    margin: 0 auto;
+    @include shadow;
+}
+
+.col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    flex: 1 1 150px; /*  Stretching: */
+}
+
+.about-content {
+    padding-right: 80px;
+}
+
+#about {
+    display: grid;
+    place-items: center;
+}

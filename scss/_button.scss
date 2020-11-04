@@ -5,14 +5,20 @@
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        width: calc(100% - 10px);
-        height: calc(100% - 10px);
-        background: rgba(0,0,0,0.3);
-        filter: blur(13px);
-    }
+    @include shadow;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 5px;
+    //     left: 5px;
+    //     width: calc(100% - 10px);
+    //     height: calc(100% - 10px);
+    //     background: rgba(0,0,0,0.3);
+    //     filter: blur(13px);
+    // }
+}
+
+.btn-yellow {
+    background: $yellow;
+    color: $secondary;
 }

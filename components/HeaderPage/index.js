@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { stagger, fadeInUp } from './../animate';
+import { stagger, fadeInUp } from '../animate';
 
-const Header = () => {
+const HeaderPage = () => {
   return (
     <>
       <motion.div
@@ -11,7 +11,11 @@ const Header = () => {
         exit={{ opacity: 0 }}
         className="header"
       >
-        <motion.div variants={fadeInUp}>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <Link href="/">
             <a>
               <h4>Bayu Riyadi</h4>
@@ -21,18 +25,8 @@ const Header = () => {
         <motion.div className="navbar" variants={stagger}>
           <ul>
             <motion.li variants={fadeInUp}>
-              <Link href='#about'>
-                <a>About</a>
-              </Link>
-            </motion.li>
-            <motion.li variants={fadeInUp}>
-              <Link href='#works'>
-                <a>Projects</a>
-              </Link>
-            </motion.li>
-            <motion.li variants={fadeInUp}>
-              <Link href='#contact'>
-                <a>Contact</a>
+              <Link href='/'>
+                <a>Back to Home</a>
               </Link>
             </motion.li>
           </ul>
@@ -42,4 +36,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderPage;

@@ -1,11 +1,16 @@
 $primary: #ddd;
 $secondary: #16171d;
+$yellow:#ffc600;
 @import "_reset.scss";
 @import "_global.scss";
+@import "_mixins.scss";
 @import "_typography.scss";
 @import "_header.scss";
 @import "_socials.scss";
 @import "_hero.scss";
 @import "_slider.scss";
-@import "_works.scss";
+@import "_projects.scss";
+@import "_about.scss";
 @import "_button.scss";
+@import "_detail.scss";
+@import "_contact.scss";
