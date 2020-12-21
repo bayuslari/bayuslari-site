@@ -24,20 +24,10 @@ const Home = (props) => {
   );
 };
 
-// Home.getStaticProps = async function() {
-//   const res = await fetch(
-//     "https://my-json-server.typicode.com/bayuslari/db/works"
-//   );
-//   const data = await res.json();
-//   return {
-//     works: data
-//   };
-// };
-
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const res = await fetch('https://my-json-server.typicode.com/bayuslari/db/works')
+  const res = await fetch('https://my-json-server.typicode.com/bayuslari/db/projects')
   const works = await res.json()
 
   // By returning { props: posts }, the Blog component
