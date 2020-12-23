@@ -1,9 +1,16 @@
 .slick-list,.slick-slider,.slick-track{position:relative;display:block}.slick-loading .slick-slide,.slick-loading .slick-track{visibility:hidden}.slick-slider{box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{top:0;left:0}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}/*# sourceMappingURL=slick.min.css.map */
 
 $height: 500px;
-.slick-slider {
-    padding-left: 50px;
-    padding-right: 50px;
+$height-img: 180px;
+
+@media (min-width: 1200px){
+    .slick-slider {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .slick-list {
+        padding: 0 33.3333% !important;
+    }
 }
 
 .slick-slide {
@@ -16,15 +23,16 @@ $height: 500px;
         transition: all .3s ease-out;
         opacity: 0.5;
         margin: 0 auto;
-        width: 80%;
-        height: $height;
+        width: 100%;
+        height: $height-img;
         object-fit: cover;
+        object-position: top;
         margin-top: 15px;
-        box-shadow: 1px 1px 15px $secondary;
+        @include shadow;
     }
 }
 
-.work-content {
+.project-content {
     height: $height;
     display: flex !important;
     align-items: center;
@@ -33,21 +41,21 @@ $height: 500px;
 
 .slick-center {
     img {
-        transform: scale(1);
         filter: none;
         transition: all .3s ease-out;
         opacity: 1;
+        transform: scale(1.2);
     }
-    .work-text {
+    .project-text {
         opacity: 1;
         transition: opacity .3s ease-out;
     }
 }
 
-.work-text {
+.project-text {
     padding: 0 15px;
     opacity: 0;
-    margin-top: -15px;
+    margin-top: -5px;
     z-index: 1;
     width: 50vw;
     text-align: center;
@@ -58,13 +66,22 @@ $height: 500px;
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 15px;
+        // mix-blend-mode: difference;
+        text-shadow: 1px 1px 30px #16171d;
+        color: #fff;
     }
-    p {
-        letter-spacing: 1px;
-        text-align: center;
-        line-height: 1.5;
-        margin-bottom: 30px;
-    }
+}
+
+.project-excerpt {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 
@@ -78,7 +95,7 @@ $height: 500px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -80px;
+    bottom: 0;
     display: block;
     width: 100%;
     padding: 0;
@@ -145,4 +162,65 @@ $height: 500px;
 {
     opacity: .75;
     color: black;
+}
+
+.slick-active .project-content {
+    z-index: 3;
+    position: relative;
+}
+
+// Arrow
+
+.slick-prev,
+.slick-next {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slick-prev {
+    background-image: url(/icons/left-chevron.svg);
+    left: -15px;
+}
+
+.slick-next {
+    background-image: url(/icons/right-chevron.svg);
+    right: -15px;
+}
+
+.slick-slider:hover {
+    .slick-prev,
+    .slick-next {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .slick-prev {
+        left: 0;
+        &:hover {
+            left: -5px;
+        }
+    }
+
+    .slick-next {
+        right: 0;
+        &:hover {
+            right: -5px;
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 767px){
+    .project-text {
+        width: 80vw;
+    }
 }

@@ -3,19 +3,23 @@ import { Hero } from '../components/Hero';
 import { Socials } from '../components/Socials';
 import Layout from '../components/layout';
 import {motion} from 'framer-motion';
-import WorkSlider from '../components/WorkSlider';
+import ProjectSlider from '../components/ProjectSlider';
 import fetch from "isomorphic-unfetch";
+import About from '../components/About';
+import Contact from '../components/Contact';
 
 const Home = (props) => {
   return (
     <motion.div initial='initial' animate='animate' exit={{opacity: 0}} >
-      <Layout title="Bayu Slari A FrontEnd Developer">
+      <Layout title="Bayu Riyadi - Front-End Developer">
         <main>
           <Header></Header>
           <Socials></Socials>
           <div className="content">
             <Hero></Hero>
-            <WorkSlider data={props.works}></WorkSlider>
+            <About></About>
+            <ProjectSlider data={props.projects}></ProjectSlider>
+            <Contact></Contact>
           </div>
         </main>
         <footer></footer>
@@ -25,16 +29,12 @@ const Home = (props) => {
 };
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
   const res = await fetch('https://my-json-server.typicode.com/bayuslari/db/projects')
-  const works = await res.json()
+  const projects = await res.json()
 
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
   return {
     props: {
-      works
+      projects
     },
   }
 }
