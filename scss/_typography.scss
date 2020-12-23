@@ -83,7 +83,7 @@ p {
     a, .highlight {
         -webkit-text-decoration: $yellow solid underline;
         text-decoration: $yellow solid underline;
-        -webkit-text-underline-position: auto;
-        text-underline-position: auto;
+        -webkit-text-underline-position: under;
+        text-underline-position: under;
     }
 }

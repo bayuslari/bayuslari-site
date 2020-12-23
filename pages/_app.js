@@ -7,6 +7,5 @@ export default function MyApp({ Component, pageProps, router }) {
     <AnimatePresence exitBeforeEnter>
       <Component {...pageProps} key={router.route} />
     </AnimatePresence>
-    
   )
 }

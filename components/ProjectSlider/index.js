@@ -58,9 +58,9 @@ const ProjectSlider = (props) => {
                         __html: project.content
                       }}></div>
                     <Link
-                      key={project.id}
-                      href="/projects/[id]"
-                      as={`/projects/${project.id}`}>
+                       key={project.id}
+                       href='/projects/[id]'
+                       as={`/projects/${project.id}`}>
                       <a className="btn">VIEW PROJECT</a>
                     </Link>
                   </div>
