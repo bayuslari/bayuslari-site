@@ -26,7 +26,7 @@ const Header = () => {
               </Link>
             </motion.li>
             <motion.li variants={fadeInUp}>
-              <Link href='#works'>
+              <Link href='#projects'>
                 <a>Projects</a>
               </Link>
             </motion.li>
