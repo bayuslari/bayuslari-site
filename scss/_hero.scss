@@ -1,4 +1,7 @@
 #hero {
     display: grid;
     place-items: center;
+    @media (max-width: 992px) {
+        position: relative;
+    }
 }

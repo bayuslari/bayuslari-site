@@ -15,6 +15,12 @@ $height-img: 180px;
 
 .slick-slide {
     height: $height;
+    @media (max-width: 767px) {
+        height: 450px;
+    }
+    @media (min-width: 768px) and (max-width: 992px){
+        height: 650px;
+    }
     img {
         max-width: 100%;
         position: relative;
@@ -29,6 +35,13 @@ $height-img: 180px;
         object-position: top;
         margin-top: 15px;
         @include shadow;
+        @media (max-width: 767px) {
+            height: 160px;
+        }
+        @media (min-width: 768px) and (max-width: 992px){
+            height: 540px;
+            transform: scale(1) !important;
+        }
     }
 }
 
@@ -69,6 +82,10 @@ $height-img: 180px;
         // mix-blend-mode: difference;
         text-shadow: 1px 1px 30px #16171d;
         color: #fff;
+    }
+    @media (min-width: 768px) and (max-width: 992px){
+        margin-top: -25px;
+        width: 75vw;
     }
 }
 
@@ -205,6 +222,9 @@ $height-img: 180px;
 
     .slick-prev {
         left: 0;
+        @media (max-width: 767px) {
+            left: -15px;
+        }
         &:hover {
             left: -5px;
         }
@@ -212,8 +232,14 @@ $height-img: 180px;
 
     .slick-next {
         right: 0;
+        @media (max-width: 767px) {
+            right: -15px;
+        }
         &:hover {
             right: -5px;
+            @media (max-width: 767px) {
+                right: -15px;
+            }
         }
     }
 }
@@ -222,5 +248,11 @@ $height-img: 180px;
 @media (max-width: 767px){
     .project-text {
         width: 80vw;
+    }
+}
+
+.slick-list {
+    @media (max-width: 767px) {
+        margin: 0 5px;
     }
 }
