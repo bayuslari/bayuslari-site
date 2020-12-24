@@ -7,6 +7,8 @@ body {
     margin: 0;
     color: $primary;
     background-color: $secondary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     &:after {
         content: '';
@@ -24,6 +26,7 @@ body {
 html,
 body {
     height: 100%;
+    width: 100%;
 }
 
 a {
@@ -92,4 +95,14 @@ a {
 .section-content {
     height: 100vh;
     padding: 1rem;
+    @media (max-width: 767px) {
+        min-height: 100vh;
+        height: 100%;
+        padding: 0;
+    }
+    @media (min-width: 768px) and (max-width: 992px) and (orientation: landscape){
+        min-height: 600px;
+        height: 100%;
+        padding: 0;
+    }
 }

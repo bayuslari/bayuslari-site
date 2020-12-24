@@ -18,7 +18,7 @@ const HeaderPage = () => {
         >
           <Link href="/">
             <a>
-              <h4>Bayu Riyadi</h4>
+              <h4 className="logo-text">Bayu Riyadi</h4>
             </a>
           </Link>
         </motion.div>
