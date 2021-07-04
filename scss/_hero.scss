@@ -3,5 +3,6 @@
     place-items: center;
     @media (max-width: 992px) {
         position: relative;
+        overflow-x: hidden;
     }
 }

@@ -5,22 +5,8 @@ html {
 body {
     padding: 0;
     margin: 0;
-    color: $primary;
-    background-color: $secondary;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    &:after {
-        content: '';
-        background: radial-gradient(circle farthest-side, #3b3d46, #16171E);
-        background-attachment: fixed;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-    }
 }
 
 html,
@@ -43,7 +29,7 @@ a {
     margin-left: auto;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
     .container {
         max-width: 540px;
     }
@@ -52,13 +38,13 @@ a {
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
-    }    
+    }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
     .container {
         max-width: 960px;
-    }   
+    }
 }
 
 @media (min-width: 1200px) {
@@ -95,14 +81,34 @@ a {
 .section-content {
     height: 100vh;
     padding: 1rem;
+
     @media (max-width: 767px) {
         min-height: 100vh;
         height: 100%;
         padding: 0;
     }
-    @media (min-width: 768px) and (max-width: 992px) and (orientation: landscape){
+
+    @media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
         min-height: 600px;
         height: 100%;
         padding: 0;
+    }
+}
+
+.darkMode {
+    background-color: $black;
+    color: $white;
+
+    a:not(.btn) {
+        color: $white;
+    }
+}
+
+.lightMode {
+    background-color: $white;
+    color: $black;
+
+    a {
+        color: $black;
     }
 }

@@ -72,17 +72,33 @@ export const fadeInUpSlow = {
   }
 };
 
-export const fadeInRight3 = {
+export const fadeInRightSlow = {
   initial: {
     x: -120,
     opacity: 0,
-    transition: { duration: 3, ease: easing }
+    transition: { duration: 2, ease: easing }
   },
   animate: {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 3,
+      duration: 2,
+      ease: easing
+    }
+  }
+};
+
+export const fadeInRight3 = {
+  initial: {
+    x: -120,
+    opacity: 0,
+    transition: { duration: 2.5, ease: easing }
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 2.5,
       ease: easing
     }
   }
@@ -92,13 +108,13 @@ export const fadeInLeft3 = {
   initial: {
     x: 120,
     opacity: 0,
-    transition: { duration: 3, ease: easing }
+    transition: { duration: 2.5, ease: easing }
   },
   animate: {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 3,
+      duration: 2.5,
       ease: easing
     }
   }

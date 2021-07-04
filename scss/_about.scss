@@ -6,9 +6,16 @@
     object-position: top center;
     display: flex;
     margin: 0 auto;
-    @include shadow;
+    @include shadow(darkMode);
+
     @media (max-width: 992px) {
         margin-bottom: 30px;
+    }
+}
+
+.lightMode {
+    .profile-pic {
+        @include shadow(lightMode);
     }
 }
 
@@ -20,11 +27,13 @@
 }
 
 .col {
-    flex: 1 1 150px; /*  Stretching: */
+    flex: 1 1 150px;
+    /*  Stretching: */
 }
 
 .about-content {
-    padding-right: 80px;
+    padding-right: 10px;
+
     @media (max-width: 992px) {
         padding: 0;
     }
@@ -34,13 +43,16 @@
     display: grid;
     place-items: center;
     padding: 0 50px;
+
     @media (max-width: 767px) {
         padding-top: 80px;
         padding-left: 5px;
         padding-right: 5px;
     }
-    @media (min-width: 768px) and (max-width: 992px){
+
+    @media (min-width: 768px) and (max-width: 992px) {
         padding: 0;
+
         .col-wrapper {
             flex-direction: column;
         }

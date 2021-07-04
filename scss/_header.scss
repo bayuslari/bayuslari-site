@@ -9,6 +9,10 @@
     transition: all .3s ease-in-out;
     @media (max-width: 767px) {
         padding: 15px 20px;
+        h3 {
+            font-size: 20px;
+            max-width: 100px;
+        }
     }
     .logo {
         height: 100px;
@@ -35,12 +39,22 @@
             margin-right: 0;
         }
     }
+
+    @media (max-width: 374px) {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 1024px) {
     .scrolled .header {
         background-color: $secondary;
         z-index: 10;
+    }
+
+    .scrolled .lightMode .header {
+        background-color: $white;
     }
 }
 

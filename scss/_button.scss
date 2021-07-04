@@ -1,24 +1,30 @@
 .btn {
     display: inline-flex;
     padding: 20px 40px;
-    background: $secondary;
+    background-color: $white;
+    color: $black;
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
-    @include shadow;
-    // &:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 5px;
-    //     left: 5px;
-    //     width: calc(100% - 10px);
-    //     height: calc(100% - 10px);
-    //     background: rgba(0,0,0,0.3);
-    //     filter: blur(13px);
-    // }
+    transition: all .3s ease;
+    @include shadow(darkMode);
+    &:hover {
+        transform: translateY(2px);
+    }
 }
 
 .btn-yellow {
-    background: $yellow;
+    background-color: $yellow !important;
     color: $secondary;
+}
+
+.lightMode {
+    .btn {
+        background-color: $black;
+        color: $white;
+        @include shadow(lightMode);
+    }
+    .btn-yellow {
+        color: $black;
+    }
 }

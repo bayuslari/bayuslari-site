@@ -14,7 +14,7 @@ const Header = () => {
         <motion.div variants={fadeInUp}>
           <Link href="/">
             <a>
-              <h4 className="logo-text">Bayu Riyadi</h4>
+              <h3 className="logo-text">Bayu Riyadi</h3>
             </a>
           </Link>
         </motion.div>

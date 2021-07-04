@@ -5,7 +5,6 @@
     padding: 30px 60px;
     z-index: 1;
     svg {
-        fill: $primary;
         width: 15px;
         margin-top: 10px;
     }
@@ -15,5 +14,21 @@
     }
     @media (min-width: 768px) and (max-width: 1024px){
         padding: 30px 40px;
+    }
+}
+
+.lightMode {
+    .socials {
+        svg {
+            fill: $secondary;
+        }
+    }
+}
+
+.darkMode {
+    .socials {
+        svg {
+            fill: $primary;
+        }
     }
 }
