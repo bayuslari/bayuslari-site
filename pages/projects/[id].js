@@ -3,7 +3,8 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import { motion } from 'framer-motion';
 import HeaderPage from "../../components/HeaderPage";
-import { Socials } from "../../components/Socials";
+import Socials from "../../components/Socials";
+import SmoothScroll from './../../components/SmoothScroll';
 import { useEffect } from 'react';
 
 const isBrowser = () => typeof window !== "undefined";
@@ -34,20 +35,22 @@ const Project = props => {
         <main>
           <HeaderPage></HeaderPage>
           <Socials></Socials>
-          <motion.div className="project-container" initial={{opacity: 0}} animate={{opacity: 1}}  transition={{ delay: .5 }}>
-            <div className="container">
-              <img className="project-img" src={project.image} alt="project image"/>
-              <div className="project-head">
-                <h1 className="project-title">{project.name}</h1>
-                <a href={project.link} className="btn btn-yellow">VISIT THIS PROJECT</a>
+          <SmoothScroll>
+            <motion.div className="project-container" initial={{opacity: 0}} animate={{opacity: 1}}  transition={{ delay: .5 }}>
+              <div className="container">
+                <img className="project-img" src={project.image} alt="project image"/>
+                <div className="project-head">
+                  <h1 className="project-title">{project.name}</h1>
+                  <a href={project.link} className="btn btn-yellow">VISIT THIS PROJECT</a>
+                </div>
+                <div
+                  className="project-desc"
+                  dangerouslySetInnerHTML={{
+                    __html: project.content
+                }}></div>
               </div>
-              <div
-                className="project-desc"
-                dangerouslySetInnerHTML={{
-                  __html: project.content
-              }}></div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </SmoothScroll>
         </main>
       </Layout>
     </motion.div>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { stagger, fadeInLeft } from './../animate';
 
-export const Socials = () => {
+const Socials = () => {
   return (
     <div className="socials">
       <motion.ul variants={stagger}>
@@ -62,3 +62,5 @@ export const Socials = () => {
     </div>
   );
 };
+
+export default Socials;

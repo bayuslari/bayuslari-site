@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
 import { stagger, fadeInUpSlow, fadeInRight3, fadeInLeft3 } from './../animate';
-import { Socials } from "../../components/Socials";
+import Socials from "../../components/Socials";
+import { useMediaQuery } from 'react-responsive';
 
-export const Hero = () => {
+const Hero = () => {
+  let isPageMobile = useMediaQuery({
+    query: '(max-width: 1023px)'
+  });
   return (
     <section id="hero" className="section-content">
       <motion.div variants={stagger}>
@@ -10,7 +14,9 @@ export const Hero = () => {
         <motion.h1 className="display-1" variants={fadeInUpSlow}>BAYU</motion.h1>
         <motion.h6 className="text-right" variants={fadeInLeft3}>A FRONT END DEVELOPER</motion.h6>
       </motion.div>
-      <Socials></Socials>
+      {isPageMobile && <Socials></Socials>}
     </section>
   );
 };
+
+export default Hero;

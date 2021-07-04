@@ -99,6 +99,11 @@ a {
     background-color: $black;
     color: $white;
 
+    .parent-smooth-scroll {
+        background-color: $black;
+        color: $white;
+    }
+
     a:not(.btn) {
         color: $white;
     }
