@@ -1,11 +1,16 @@
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion';
+import withDarkMode, { useDarkMode } from "next-dark-mode";
 import '../scss/styles.scss'
 
-// This default export is required in a new `pages/_app.js` file.
-export default function MyApp({ Component, pageProps, router }) {
+const MyApp = ({ Component, pageProps, router }) => {
+  const { darkModeActive } = useDarkMode();
   return (
     <AnimatePresence exitBeforeEnter>
-      <Component {...pageProps} key={router.route} />
+      <div className={darkModeActive ? "darkMode" : "lightMode"}>
+        <Component {...pageProps} key={router.route} />
+      </div>
     </AnimatePresence>
   )
 }
+
+export default withDarkMode(MyApp);

@@ -1,18 +1,30 @@
-@mixin shadow {
-    box-shadow: 1px 1px 15px $secondary;
+// $mode: (darkMode:darkMode,
+//   lightMode:lightMode);
+
+@mixin shadow ($mode: "") {
+  @if $mode == "darkMode"{
+    box-shadow: 0 16px 40px rgba($white, 0.12);
+  } 
+
+  @if $mode == "lightMode"{
+    box-shadow: 0 16px 40px rgba($black, 0.12);
+  }
 }
 
 // Margin and Padding
 $max: 80;
 $offset: 5;
 $unit: 'px';
+
 @mixin list-loop($className, $styleName) {
   $i: 0;
-  @while $i <= $max {
-    #{$className + $i} { 
+
+  @while $i <=$max {
+    #{$className + $i} {
       #{$styleName}: #{$i + $unit};
     }
-    $i: $i + $offset;
+
+    $i: $i+$offset;
   }
 }
 

@@ -1,7 +1,7 @@
 .slick-list,.slick-slider,.slick-track{position:relative;display:block}.slick-loading .slick-slide,.slick-loading .slick-track{visibility:hidden}.slick-slider{box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{top:0;left:0}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}/*# sourceMappingURL=slick.min.css.map */
 
 $height: 500px;
-$height-img: 180px;
+$height-img: 200px;
 
 @media (min-width: 1200px){
     .slick-slider {
@@ -16,7 +16,7 @@ $height-img: 180px;
 .slick-slide {
     height: $height;
     @media (max-width: 767px) {
-        height: 450px;
+        height: 530px;
     }
     @media (min-width: 768px) and (max-width: 992px){
         height: 650px;
@@ -37,6 +37,7 @@ $height-img: 180px;
         @include shadow;
         @media (max-width: 767px) {
             height: 160px;
+            object-fit: contain;
         }
         @media (min-width: 768px) and (max-width: 992px){
             height: 540px;
@@ -80,8 +81,8 @@ $height-img: 180px;
         text-align: center;
         margin-bottom: 15px;
         // mix-blend-mode: difference;
-        text-shadow: 1px 1px 30px #16171d;
-        color: #fff;
+        text-shadow: 1px 1px 30px $black;
+        color: $white;
     }
     @media (min-width: 768px) and (max-width: 992px){
         margin-top: -25px;
@@ -97,8 +98,12 @@ $height-img: 180px;
     margin-bottom: 30px;
     letter-spacing: 1px;
     text-align: center;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
     margin-bottom: 30px;
+    @media (max-width: 768px){
+        -webkit-line-clamp: 4;
+    }
 }
 
 
@@ -170,7 +175,7 @@ $height-img: 180px;
     text-align: center;
 
     opacity: .25;
-    color: black;
+    color: $white;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -178,7 +183,7 @@ $height-img: 180px;
 .slick-dots li.slick-active button:before
 {
     opacity: .75;
-    color: black;
+    color: $white;
 }
 
 .slick-active .project-content {
@@ -204,12 +209,12 @@ $height-img: 180px;
 }
 
 .slick-prev {
-    background-image: url(/icons/left-chevron.svg);
+    background-image: url(/icons/white-left-chevron.svg);
     left: -15px;
 }
 
 .slick-next {
-    background-image: url(/icons/right-chevron.svg);
+    background-image: url(/icons/white-right-chevron.svg);
     right: -15px;
 }
 
@@ -255,4 +260,35 @@ $height-img: 180px;
     @media (max-width: 767px) {
         margin: 0 5px;
     }
+}
+
+.lightMode {
+    .slick-slide img {
+        @include shadow(light);
+    }
+    .project-text h2 {
+        color: $black;
+        text-shadow: 
+        1px 0px 4px #ccc, 0px 1px 4px #eee, 
+        2px 1px 4px #ccc, 1px 2px 4px #eee,
+        3px 2px 4px #ccc, 2px 3px 4px #eee,
+        4px 3px 4px #ccc, 3px 4px 4px #eee,
+        5px 4px 4px #ccc, 4px 5px 4px #eee,
+        6px 5px 4px #ccc, 5px 6px 4px #eee,
+        7px 6px 4px #ccc;
+    }
+    .slick-prev {
+        background-image: url(/icons/black-left-chevron.svg);
+        left: -15px;
+    }
+    
+    .slick-next {
+        background-image: url(/icons/black-right-chevron.svg);
+        right: -15px;
+    }
+    .slick-dots li button:before,
+    .slick-dots li.slick-active button:before {
+        color: $black;
+    }
+
 }

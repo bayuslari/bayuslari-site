@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 const isBrowser = () => typeof window !== "undefined";
 
 const Home = (props) => {
+  const { projects } = props;
   const onScroll = () => {
     if (window.pageYOffset > 100) {
       document.querySelector('body').classList.add('scrolled')
@@ -33,7 +34,7 @@ const Home = (props) => {
           <div className="content">
             <Hero></Hero>
             <About></About>
-            <ProjectSlider data={props.projects}></ProjectSlider>
+            <ProjectSlider data={projects}></ProjectSlider>
             <Contact></Contact>
           </div>
         </main>
@@ -43,15 +44,26 @@ const Home = (props) => {
   );
 };
 
-export async function getStaticProps() {
-  const res = await fetch('https://my-json-server.typicode.com/bayuslari/db/projects')
-  const projects = await res.json()
+const getServerSideProps = async () => {
+  const res = await fetch('https://my-json-server.typicode.com/bayuslari/db/projects');
+  const projects = await res.json();
+
+  if (!projects) {
+    return {
+      props: {
+        err: {
+          statusCode: 404,
+        },
+      },
+    };
+  }
 
   return {
     props: {
-      projects
+      projects,
     },
-  }
-}
+  };
+};
 
 export default Home;
+export { getServerSideProps };
