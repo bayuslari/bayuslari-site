@@ -38,6 +38,7 @@ const Home = (props) => {
       >
         <Header></Header>
         <Socials></Socials>
+        <h1>{process.env.secondSecret}</h1>
         <div className="content" data-scroll-container>
           <Hero></Hero>
           <About></About>
