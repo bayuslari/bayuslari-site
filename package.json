@@ -9,7 +9,6 @@
     "export": "next export"
   },
   "dependencies": {
-    "@ap.cx/react-fullpage": "^0.2.0",
     "framer-motion": "^2.7.1",
     "gsap": "^3.7.0",
     "isomorphic-unfetch": "^3.0.0",
@@ -18,7 +17,6 @@
     "next-dark-mode": "^3.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-locomotive-scroll": "^0.1.8",
     "react-slick": "^0.27.11",
     "sass": "^1.26.10",
     "use-resize-observer": "^7.0.0"

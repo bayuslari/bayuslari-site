@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 const isBrowser = () => typeof window !== 'undefined';
 
 const Project = (props) => {
-  console.log(props);
   const { project } = props;
   const onScroll = () => {
     if (window.pageYOffset > 50) {
