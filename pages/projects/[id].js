@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import HeaderPage from '../../components/HeaderPage';
 import { Socials } from '../../components/Socials';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const isBrowser = () => typeof window !== 'undefined';
 
@@ -24,9 +25,15 @@ const Project = (props) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [onScroll]);
 
+  const router = useRouter();
+  const pathname = `https://bayuslari.com${router.asPath}`;
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
-      <Layout title={`Bayu Riyadi's Project: ${project.name}`}>
+      <Layout
+        title={`Bayu Riyadi - ${project.name}`}
+        canonical={pathname}
+        description="Bayu Riyadi's Project"
+      >
         <HeaderPage></HeaderPage>
         <Socials></Socials>
 

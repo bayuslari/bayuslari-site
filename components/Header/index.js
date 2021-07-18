@@ -21,7 +21,7 @@ const Header = () => {
         <motion.div variants={fadeInUp}>
           <Link href="/">
             <a onClick={(e) => scrollToSection(e, '#hero')}>
-              <h3 className="logo-text">Bayu Riyadi</h3>
+              <h1 className="logo-text">Bayu Riyadi</h1>
             </a>
           </Link>
         </motion.div>
