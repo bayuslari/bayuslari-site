@@ -1,11 +1,10 @@
 import fetch from 'isomorphic-unfetch';
-import Head from 'next/head';
 import Layout from '../../components/layout';
 import { motion } from 'framer-motion';
-import HeaderPage from '../../components/HeaderPage';
 import { Socials } from '../../components/Socials';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Header from '../../components/Header';
 
 const isBrowser = () => typeof window !== 'undefined';
 
@@ -28,13 +27,18 @@ const Project = (props) => {
   const router = useRouter();
   const pathname = `https://bayuslari.com${router.asPath}`;
   return (
-    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+    <motion.div
+      className="detail-page"
+      initial="initial"
+      animate="animate"
+      exit={{ opacity: 0 }}
+    >
       <Layout
         title={`Bayu Riyadi - ${project.name}`}
         canonical={pathname}
         description="Bayu Riyadi's Project"
       >
-        <HeaderPage></HeaderPage>
+        <Header detail></Header>
         <Socials></Socials>
 
         <motion.div
