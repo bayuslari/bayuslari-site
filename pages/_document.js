@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
             <>
               <script
                 async
-                src={`https://www.googletagmanager.com/gtag/js?id=${secrets.GA_TRACKING_ID}`}
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
               />
               <script
                 dangerouslySetInnerHTML={{
@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag("js", new Date());
-              gtag("config", "${secrets.GA_TRACKING_ID}", {
+              gtag("config", "${process.env.GA_TRACKING_ID}", {
                 page_path: window.location.pathname,
               });
             `
