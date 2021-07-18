@@ -1,13 +1,13 @@
-import Header from '../components/Header';
-import { Hero } from '../components/Hero';
+import Header from '../components/header';
+import { Hero } from '../components/hero';
 import Layout from '../components/layout';
 import { motion } from 'framer-motion';
-import ProjectSlider from '../components/ProjectSlider';
+import ProjectSlider from '../components/project-slider';
 import fetch from 'isomorphic-unfetch';
-import About from '../components/About';
-import Contact from '../components/Contact';
+import About from '../components/about';
+import Contact from '../components/contact';
 import { useEffect } from 'react';
-import { Socials } from '../components/Socials';
+import { Socials } from '../components/socials';
 
 const isBrowser = () => typeof window !== 'undefined';
 

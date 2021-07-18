@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { stagger, fadeInUpSlow, fadeInRight3, fadeInLeft3 } from './../animate';
+import { stagger, fadeInUpSlow, fadeInRight3, fadeInLeft3 } from './animate';
 
 export const Hero = () => {
   return (
