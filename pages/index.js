@@ -27,9 +27,15 @@ const Home = (props) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [onScroll]);
 
+  const pathname = `https://bayuslari.com`;
+
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
-      <Layout title="Bayu Riyadi - Front-End Developer">
+      <Layout
+        title="Bayu Riyadi - Senior Front-End Developer"
+        canonical={pathname}
+        description="Senior Front-End Developer based on Yogyakarta, Indonesia with years of extensive experience in building high-quality sites. React JS lover."
+      >
         <Header></Header>
         <Socials></Socials>
         <div className="content" data-scroll-container>
