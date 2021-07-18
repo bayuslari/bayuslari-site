@@ -1,6 +1,6 @@
-html {
-    scroll-behavior: smooth;
-}
+// html {
+//     scroll-behavior: smooth;
+// }
 
 body {
     padding: 0;
@@ -9,11 +9,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body {
-    height: 100%;
-    width: 100%;
-}
+// body {
+//     overflow: hidden;
+// }
+
+// html,
+// body {
+//     height: 100%;
+//     width: 100%;
+// }
 
 a {
     color: $primary;
@@ -81,6 +85,7 @@ a {
 .section-content {
     height: 100vh;
     padding: 1rem;
+    max-height: 100vh;
 
     @media (max-width: 767px) {
         min-height: 100vh;
@@ -112,3 +117,11 @@ a {
         color: $black;
     }
 }
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+// main {
+//     position: relative;
+// }

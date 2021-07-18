@@ -5,17 +5,13 @@ import Link from 'next/link';
 const ProjectSlider = (props) => {
   const PrevArrow = (props) => {
     const { className, onClick } = props;
-    return (
-      <div className={className} onClick={onClick}></div>
-    )
-  }
+    return <div className={className} onClick={onClick}></div>;
+  };
 
   const NextArrow = (props) => {
     const { className, onClick } = props;
-    return (
-      <div className={className} onClick={onClick}></div>
-    )
-  }
+    return <div className={className} onClick={onClick}></div>;
+  };
 
   const settings = {
     dots: true,
@@ -27,24 +23,24 @@ const ProjectSlider = (props) => {
     slidesToScroll: 1,
     centerMode: true,
     arrows: true,
-    prevArrow: <PrevArrow/>,
-    nextArrow: <NextArrow/>,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     centerPadding: '33.33333%',
     responsive: [
       {
         breakpoint: 992,
         settings: {
-          centerPadding: '0',
+          centerPadding: '0'
         }
-      },
+      }
     ]
   };
 
   const projects = props.data;
   return (
     <>
-      <section id="projects" className="section-content">
-        <div className="container">
+      <section id="projects" className="section-content" data-scroll-section>
+        <div className="container" data-scroll data-scroll-position="projects">
           <Slider {...settings}>
             {projects.map((project) => {
               return (
@@ -56,11 +52,13 @@ const ProjectSlider = (props) => {
                       className="project-excerpt"
                       dangerouslySetInnerHTML={{
                         __html: project.content
-                      }}></div>
+                      }}
+                    ></div>
                     <Link
-                       key={project.id}
-                       href='/projects/[id]'
-                       as={`/projects/${project.id}`}>
+                      key={project.id}
+                      href="/projects/[id]"
+                      as={`/projects/${project.id}`}
+                    >
                       <a className="btn">VIEW PROJECT</a>
                     </Link>
                   </div>

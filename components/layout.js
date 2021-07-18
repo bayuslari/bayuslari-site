@@ -1,8 +1,7 @@
 import Head from 'next/head';
-export default function Layout({
-  children,
-  title = 'This is the default title'
-}) {
+import { SmoothScrollProvider } from './scroll';
+
+const Layout = ({ children, title = 'This is the default title' }) => {
   return (
     <>
       <Head>
@@ -14,4 +13,6 @@ export default function Layout({
       {children}
     </>
   );
-}
+};
+
+export default Layout;
