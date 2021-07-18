@@ -10,6 +10,7 @@ const HeaderPage = () => {
         animate="animate"
         exit={{ opacity: 0 }}
         className="header"
+        data-scroll-sticky
       >
         <motion.div
           initial={{ scale: 0 }}
@@ -25,7 +26,7 @@ const HeaderPage = () => {
         <motion.div className="navbar" variants={stagger}>
           <ul>
             <motion.li variants={fadeInUp}>
-              <Link href='/'>
+              <Link href="/">
                 <a>Back to Home</a>
               </Link>
             </motion.li>
