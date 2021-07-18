@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useContext } from 'react';
-import { SmoothScrollContext } from '../scroll';
-import { stagger, fadeInUp } from './../animate';
+import { SmoothScrollContext } from './scroll';
+import { stagger, fadeInUp } from './animate';
 
 const Header = ({ detail }) => {
   const { scroll } = useContext(SmoothScrollContext);

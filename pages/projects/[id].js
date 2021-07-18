@@ -1,10 +1,10 @@
 import fetch from 'isomorphic-unfetch';
 import Layout from '../../components/layout';
 import { motion } from 'framer-motion';
-import { Socials } from '../../components/Socials';
+import { Socials } from '../../components/socials';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Header from '../../components/Header';
+import Header from '../../components/header';
 
 const isBrowser = () => typeof window !== 'undefined';
 

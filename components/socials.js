@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { stagger, fadeInLeft } from './../animate';
+import { stagger, fadeInLeft } from './animate';
 
 export const Socials = () => {
   return (
