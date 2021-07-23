@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -14,11 +14,15 @@ const About = () => {
         <div className="container">
           <div className="col-wrapper">
             <div className="col">
-              <img
-                className="profile-pic"
-                src="/bayu.jpg"
-                alt="profile-picture"
-              />
+              <div className="profile-pic">
+                <Image
+                  src="/bayu.webp"
+                  layout="responsive"
+                  width={240}
+                  height={240}
+                  alt="Bayu's profile picture"
+                />
+              </div>
             </div>
             <div className="col about-content">
               <h2 className="display-4 m-b-20">Hi there!</h2>

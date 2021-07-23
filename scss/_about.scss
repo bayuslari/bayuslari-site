@@ -1,15 +1,19 @@
 .profile-pic {
-    border-radius: 50%;
+    position: relative;
     height: 240px;
     width: 240px;
-    object-fit: cover;
-    object-position: top center;
-    display: flex;
+    border-radius: 50%;
+    display: block;
     margin: 0 auto;
     @include shadow(darkMode);
 
     @media (max-width: 992px) {
         margin-bottom: 30px;
+    }
+    img {
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 50%;
     }
 }
 

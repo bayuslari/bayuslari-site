@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ProjectSlider = (props) => {
   const PrevArrow = (props) => {
@@ -45,7 +46,7 @@ const ProjectSlider = (props) => {
             {projects.map((project) => {
               return (
                 <div className="project-content" key={project.id}>
-                  <img alt="image" src={project.image} />
+                  <img alt={project.name} src={project.image} />
                   <div className="project-text">
                     <h2>{project.name}</h2>
                     <div

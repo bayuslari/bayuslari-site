@@ -14,7 +14,9 @@ $height-img: 200px;
 }
 
 .slick-slide {
-    height: $height;
+    .project-image {
+        height: $height;
+    }
     @media (max-width: 767px) {
         height: 530px;
     }
@@ -29,8 +31,8 @@ $height-img: 200px;
         transition: all .3s ease-out;
         opacity: 0.5;
         margin: 0 auto;
-        width: 100%;
-        height: $height-img;
+        width: 100% !important;
+        height: $height-img !important;
         object-fit: cover;
         object-position: top;
         margin-top: 15px;
