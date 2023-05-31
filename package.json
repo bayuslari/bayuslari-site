@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "framer-motion": "^2.7.1",
     "gsap": "^3.7.0",
     "isomorphic-unfetch": "^3.0.0",

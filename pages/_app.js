@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import * as gtag from '../lib/gtag';
 import '../scss/styles.scss';
+import { Analytics } from '@vercel/analytics/react';
 
 const MyApp = ({ Component, pageProps }) => {
   const { darkModeActive } = useDarkMode();
@@ -27,6 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
           <Component {...pageProps} key={router.route} />
         </SmoothScrollProvider>
       </div>
+      <Analytics />
     </AnimatePresence>
   );
 };
