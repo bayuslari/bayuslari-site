@@ -1,27 +1,9 @@
 body {
-    font-family: "Cera CY Regular", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
         Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
         sans-serif;
     letter-spacing: 0.5px;
     font-size: 18px;
-}
-
-@font-face {
-    font-family: 'Cera CY Regular';
-    src: url('./../fonts/Cera-CY-Regular.ttf') format('truetype');
-    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
-
-@font-face {
-    font-family: 'Cera CY Bold';
-    src: url('./../fonts/Cera-CY-Bold.ttf') format('truetype');
-    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
-
-@font-face {
-    font-family: 'Cera Black';
-    src: url('./../fonts/Cera-Black.ttf') format('truetype');
-    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 h1, .h1 {
@@ -47,7 +29,7 @@ h5, .h5 {
 h6, .h6 {
     font-size: 14px;
     letter-spacing: 2px;
-    font-family: 'Cera CY Bold', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
         Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -55,7 +37,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Cera Black", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
         Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
         sans-serif;
 }
@@ -80,7 +62,9 @@ h4 {
 
 .display-2 {
     font-size: 88px;
-    font-family: 'Cera CY Regular';
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 
     @media (max-width: 767px) {
         font-size: 60px;
